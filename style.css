@@ -1,0 +1,123 @@
+/* 기본 설정 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ddd;
+}
+
+/* 전체 레이아웃 */
+#app {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  height: 85vh;
+  border: 2px solid black;
+  background: white;
+}
+
+/* 게임 화면 */
+#gameContainer {
+  flex: 3.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+}
+
+canvas {
+  width: 95%;
+  height: 95%;
+  background: white;
+}
+
+/* UI 컨테이너 */
+#uiContainer {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* 버튼 스타일 */
+button {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 방 목록 */
+#roomList {
+  width: 90%;
+  text-align: center;
+}
+
+/* 방 아이템 */
+.room-item {
+  position: relative;
+  padding: 10px;
+  background: #eee;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* 폴더 스타일 */
+.folder-container {
+  margin-left: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.folder-container.active {
+  max-height: 200px;
+}
+
+/* 폴더 개별 스타일 */
+.folder {
+  position: relative;
+  padding: 10px;
+  margin: 5px;
+  background: #ddd;
+}
+
+/* + 버튼 */
+.plus-button {
+  display: block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 삭제 버튼 (X) */
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
